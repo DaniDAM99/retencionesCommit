@@ -17,10 +17,13 @@ public class Retencion {
 
     public Retencion() {
     }
-    
 
-    public Retencion(String salarioBruto) {
-        this.salarioBruto = Float.parseFloat(salarioBruto);
+    public float getSalarioBruto() {
+        return salarioBruto;
+    }
+
+    public void setSalarioBruto(float salarioBruto) {
+        this.salarioBruto = salarioBruto;
         
         if (this.salarioBruto <= 1000) {
             this.retencion = 0;
@@ -30,14 +33,6 @@ public class Retencion {
             this.retencion = this.salarioBruto / 20;
         }
         this.salarioNeto = this.salarioBruto - this.retencion;
-    }
-
-    public float getSalarioBruto() {
-        return salarioBruto;
-    }
-
-    public void setSalarioBruto(float salarioBruto) {
-        this.salarioBruto = salarioBruto;
     }
 
     public float getRetencion() {
